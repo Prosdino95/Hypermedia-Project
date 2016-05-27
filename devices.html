@@ -3,12 +3,32 @@
 <head>
     <title> Tim_Home_Page </title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link type="text/css" rel="stylesheet" href="css/bootstrap.css">
-    <link type="text/css" rel="stylesheet" href="css/bootstrap-theme.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link type="text/css" rel="stylesheet" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <!--script per il pulsante "show more"-->
+    <script>
+        $(document).ready(function(){
+            $(".show-others").click(function(){
+                $(this).parent().parent().children(".not-shown").toggle();
+                $(this).text(function(i, text){
+                    console.log(text);
+                    return text==="show more>>"?"show less<<":"show more>>";
+                });
+            });
+        });
+    </script>
+    <style>
+        .panel-group{
+            margin-top: 0px;
+        }
+    </style>
 </head>
 <body>
-<div class="row">
-<div class="col-sm-3">
+    <div class="row">
+    <div class="col-sm-3">
     <div class="container-fluid">
     <a href="index.html">
         <img src="img/tim-logo.png" class="img-responsive"/>
@@ -26,6 +46,117 @@
         </div>
     </div>
 </div>
+    <!--Da qui inizia il codice del filtro-->
+    <div class="box-filtro">
+        <div class="cont-interno">
+            <div class="panel-group" id="accordion">
+                <h4 class="title-filtra">Filtra per</h4>
+                <div id="first-panel" class="panel panel-default">
+                    <div class="panel-heading active">
+                        <h4 class="panel-title">Brand</h4>
+                    </div>
+                    <div id="Brand" class="panel-collapse collpase in">
+                        <div class="panel-body">
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" class="ez-checkbox">Alcatel
+                                </label>
+                            </div>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" class="ez-checkbox">Apple
+                                </label>
+                            </div>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" class="ez-checkbox">BlackBerry
+                                </label>
+                            </div>
+                            <div class="checbox">
+                                <label class="show-others">
+                                    show more&gt;&gt;
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="filter-panel" class="panel panel-default">
+                    <div class="panel-heading active">
+                        <h4 class="panel-title">Cost</h4>
+                    </div>
+                    <div id="Cost" class="panel-collapse collpase in">
+                        <div class="panel-body">
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" class="ez-checkbox">&lt;150
+                                </label>
+                            </div>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" class="ez-checkbox">151-300
+                                </label>
+                            </div>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" class="ez-checkbox">301-400
+                                </label>
+                            </div>
+                            <div class="checkbox not-shown">
+                                <label>
+                                    <input type="checkbox" class="ez-checkbox">401-500
+                                </label>
+                            </div>
+                            <div class="checkbox not-shown">
+                                <label>
+                                    <input type="checkbox" class="ez-checkbox">501-600
+                                </label>
+                            </div>
+                            <div class="checkbox not-shown">
+                                <label>
+                                    <input type="checkbox" class="ez-checkbox">&gt;600
+                                </label>
+                            </div>
+                            <div class="checbox">
+                                <label class="show-others">
+                                    show more&gt;&gt;
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="filter-panel" class="panel panel-default">
+                    <div class="panel-heading active">
+                        <h4 class="panel-title">Technical Characteristic: OS</h4>
+                    </div>
+                    <div id="Cost" class="panel-collapse collpase in">
+                        <div class="panel-body">
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" class="ez-checkbox">Android
+                                </label>
+                            </div>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" class="ez-checkbox">iOS
+                                </label>
+                            </div>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" class="ez-checkbox">Windows
+                                </label>
+                            </div>
+                            <div class="checbox">
+                                <label class="show-others">
+                                    show more&gt;&gt;
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Qui finisce il codice del filtro-->
 </body>
 
 
