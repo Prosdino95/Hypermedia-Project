@@ -1,0 +1,19 @@
+.title{
+    font-family:Arial Rounded MT Bold;
+    color:#DF0101;
+    font-size: 30px;
+    font-weight:bold;
+    text-align: center;
+}
+
+.immagedx{
+	height:40%; 
+	width: 40%; 
+	float:left;
+}
+
+.immagesx{
+	height:40%; 
+	width: 40%; 
+	float:right;
+} 
