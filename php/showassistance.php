@@ -11,10 +11,11 @@ if (mysqli_connect_errno()) { //verify connection
     exit(); //do nothing else 
 }
 else {
-    //echo "Successful connection"; // connection ok
+    //Takes the input value for the ID
+    $number=$_POST["number"];
 
     # extract results mysqli_result::fetch_array
-    $query = " SELECT * FROM `assistanceservice`  ";
+    $query = " SELECT * FROM `assistanceservice` WHERE nameID='" . $number . "'";
     //query execution
     $result = $mysqli->query($query);
     //if there are data available

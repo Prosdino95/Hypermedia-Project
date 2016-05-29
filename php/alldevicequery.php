@@ -14,7 +14,7 @@ else {
     //echo "Successful connection"; // connection ok
 
     # extract results mysqli_result::fetch_array
-    $query = " SELECT * FROM `assistanceservice`  ";
+    $query = " SELECT * FROM `devices`  ";
     //query execution
     $result = $mysqli->query($query);
     //if there are data available

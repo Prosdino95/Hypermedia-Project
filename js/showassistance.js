@@ -1,19 +1,24 @@
 $("document").ready(function(){
+        
+    $(".query").on("click",function(){
+        var value=$(".value").val();//inizializza il valore da passare ad ajax
+        console.log("la funzione è stata chiamata correttamente");
         $.ajax({
             method: "POST",
             //dataType: "json", //type of data
             crossDomain: true,
-            url: "./php/performquery.php", //Relative or absolute path to file.php file
             
+            
+            url: "./php/showassistance.php", //Relative or absolute path to file.php file
+            data: {number:value},
             success: function(response) {
                   var assistance = JSON.parse(response)
-               var res=""; // el è una stringa in cui metti l'html che verrà mostrato
             for(var i=0;i<assistance.length;i++){ //ogni 3 istanze dovresti cambiare riga
-                $(".results").append("<div class='well col-md-6 container-fluid' id='" + i + "'></div>");
+                $(".results").append("<div class='container-fluid row' id='" + i + "'></div>");
                 $("#"+ i).append("<h2>"+  assistance[i].nameID +"</h2>");
-                $("#"+ i).append("<img src='" + assistance[i].img + "' class='img-responsive pull-left gap-right' style='max-width: 150px; max-height: 178px;'>");
+                $("#"+ i).append("<img src='" + assistance[i].img + "' class='img-responsive pull-left gap-right' style='max-width: 210px; max-height: 228px;'>");
                 $("#"+ i).append("<p>"+  assistance[i].description +"</p>");
-                $("#"+ i).append("<a type='submit' class='query pull-right btn btn-info' value='"+ assistance[i].nameID  +"'>Discover More!</a>");
+                $("#"+ i).append("<h3>CIAOSTRONZI</h3>");
                 
             }
 
@@ -25,4 +30,5 @@ $("document").ready(function(){
             }
         });
         return false;
+    });
     });

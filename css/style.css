@@ -29,8 +29,8 @@
     /* Navbar links: increase padding for taller navbar */
     .navbar-fixed-top .nav > li > a {
       padding: 15px 10px;
-      color: #ffffff; 
-      font-size:20px;
+      color: #2e7e98;
+      font-size: 18px;
     }
 
     .navbar-fixed-top .nav > li > a:hover {
@@ -47,7 +47,8 @@
     }
 
     .navbar-fixed-top{
-      background-color: #074788;
+      background-color: #86c5da;
+      background:rgba(255,255,255,0.5);
     }
 
     /* Offset the responsive button for proper vertical alignment */

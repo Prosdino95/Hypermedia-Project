@@ -9,6 +9,7 @@
     <link type="text/css" rel="stylesheet" href="./css/devicestyle.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="./js/showdevice.js"></script>
     
     <!--script per il pulsante "show more"-->
     <script>
@@ -29,25 +30,43 @@
     </style>
 </head>
 <body>
-    <div class="row">
-    <div class="col-sm-3">
-    <div class="container-fluid">
-    <a href="index.html">
-        <img src="img/tim-logo.png" class="img-responsive"/>
-        </a>
-    </div>
-    </div>   
-    <div class="container-fluid">
-        <div class="btn-group btn-group-justified btn-group-lg">
-            <a href="whoweare.html" class="btn btn-primary">Who We Are</a>
-            <a href="promotions.html" class="btn btn-primary">Promotion</a>
-            <a href="devices.html" class="btn btn-primary">Device</a>
-            <a href="smartlifeservices.html" class="btn btn-primary">Smart Life Service</a>
-            <a href="assistanceservices.html" class="btn btn-primary">Assistance Service</a>
-            <a href="thegroup.html" class="btn btn-primary">The Group-Tim</a>
-        </div>
-    </div>
+    <!-- NAVBAR=================== -->    
+<div class="row" style="margin-top: 7%;">
+        <nav class="nav navbar-fixed-top" role="navigation">
+            <div id="header">
+                <ul class="nav nav-pills" >
+                    <li><a href="index.html" class="btn btn-defaul" id="logo";>
+                        <img src="img/tim-logo.png" class="img-responsive"/></a></li>            
+                    <li><a href="#home" class="brand" > <strong>Who We Are</strong></a></li>
+                    <li><a href="#home"><strong>Promotions</strong></a></li>
+                    <li class="dropdown" >
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="devices.html"><strong>Device</strong>
+                        <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#"><strong>Device Category</strong></a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#"><strong>Smart Life Service</strong>
+                        <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#"><strong>Smart Life Service Category</strong></a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#"><strong>Assistance Service</strong>
+                        <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#"><strong>Assistance Service Category</strong></a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#home"><strong>The Group TIM</strong></a></li>
+                </ul>
+                
+      </div>      
+    </nav>
 </div>
+<!-- END NAVBAR=================== -->
     <!--Da qui inizia il codice del filtro-->
     <div class="box-filtro">
         <div class="cont-interno">
@@ -157,6 +176,9 @@
         </div>
     </div>
     <!--Qui finisce il codice del filtro-->
+    
+    <div class='results'></div>
+    
 </body>
 
 
