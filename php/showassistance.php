@@ -12,10 +12,9 @@ if (mysqli_connect_errno()) { //verify connection
 }
 else {
     //Takes the input value for the ID
-    $number=$_POST["number"];
-
+    $id=$_GET["id"];
     # extract results mysqli_result::fetch_array
-    $query = " SELECT * FROM `assistanceservice` WHERE nameID='" . $number . "'";
+    $query = "SELECT * FROM `assistanceservice` WHERE `nameID`='" . $id . "'";
     //query execution
     $result = $mysqli->query($query);
     //if there are data available

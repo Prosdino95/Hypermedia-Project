@@ -13,7 +13,8 @@ $("document").ready(function(){
                 $("#"+ i).append("<h2>"+  assistance[i].nameID +"</h2>");
                 $("#"+ i).append("<img src='" + assistance[i].img + "' class='img-responsive pull-left gap-right' style='max-width: 150px; max-height: 178px;'>");
                 $("#"+ i).append("<p>"+  assistance[i].description +"</p>");
-                $("#"+ i).append("<a type='submit' class='query pull-right btn btn-info' value='"+ assistance[i].nameID  +"'>Discover More!</a>");
+                $("#"+ i).append('<a type="submit" class="query pull-right btn btn-info" onclick="showdetail(\''+assistance[i].nameID+'\');">Discover More!</a>');
+                
                 
             }
 
