@@ -255,3 +255,14 @@
     .footer-legal-info{
         height: 100%;
     }
+
+    footer li{
+        float: left;
+        margin-right: 30px;
+        margin-left: 30px;
+        line-height: 60px;
+    }
+    footer .container{
+        width: auto;
+        min-width: 1349px;
+        background-color: #f0f0f0;
