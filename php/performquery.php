@@ -14,7 +14,8 @@ else {
     //echo "Successful connection"; // connection ok
 
     # extract results mysqli_result::fetch_array
-    $query = " SELECT * FROM `assistanceservice`  ";
+    $data = $_POST['table'];
+    $query = "SELECT * FROM `".$data."`";
     //query execution
     $result = $mysqli->query($query);
     //if there are data available
@@ -38,7 +39,11 @@ else {
 }
 
 
-
+function console_log( $data ){
+  echo '<script>';
+  echo 'console.log('. json_encode( $data ) .')';
+  echo '</script>';
+}
 
 
 ?>
