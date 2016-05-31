@@ -4,7 +4,7 @@
 //echo "I'm the php";
 
 //connection to db
-$mysqli = new mysqli("localhost", "root", "", "my_hypertim");
+$mysqli = new mysqli("localhost", "root", "", "tim");
 
 if (mysqli_connect_errno()) { //verify connection
     echo "Error to connect to DBMS: ".mysqli_connect_error(); //notify error
