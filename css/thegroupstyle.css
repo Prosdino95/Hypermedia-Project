@@ -12,3 +12,12 @@
     text-align: left;
     font-weight:bold;
 }
+
+thead {
+    background-color: #e0001a;
+    color: white;
+}
+
+table .marked{
+    background-color: cornflowerblue;
+}
