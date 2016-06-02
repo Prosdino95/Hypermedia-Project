@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>The Group Tim</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-    <link rel="stylesheet" href="./css/DeviceAsSl.css">
+    <title> Tim_Home_Page </title>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/thedevicestyle.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-  <script src="./js/navbar.js"></script>
-    
+    <script src="./js/loaddevice.js"></script>
+    <script src="./js/navbar.js"></script>
 </head>
- <body>
+<body>
 <!-- NAVBAR=================== -->    
 <div class="row" style="margin-top: 7%;">
         <nav class="nav navbar-fixed-top" role="navigation">
@@ -48,46 +48,33 @@
       </div>      
     </nav>
 </div>
-<!-- END NAVBAR=================== -->
-     
-     
-     
-<div class="row" style="margin-top: 10%;">   
-<div class="container">
-    <div class="row">  
-        <div class="pull-left ">
-            <img src="./img/smartphone.png" class="immagedx">
-            <h3 class="title">Smartphones</h3>
-        </div> 
-    </div> 
-    <div class="row">
-        <div class="pull-right ">
-            <img src="./img/tablet.png" class="immagesx img-responsive">
-            <h3 class="title">Tablets & Computers</h3>
-        </div>
-    </div>
-    <div class="row">  
-        <div class="pull-left ">
-            <img src="./img/tv.png" class="immagedx img-responsive">
-            <h3 class="title">TV & SmartLiving</h3>
-        </div> 
-    </div> 
-    <div class="row">
-        <div class="pull-right ">
-            <img src="./img/modem.png" class="immagesx img-responsive">
-            <h3 class="title">Modem & Networking</h3>
-        </div>
-    </div>    
-    <div class="row">  
-        <div class="pull-left ">
-            <img src="./img/outlet.png" class="immagedx img-responsive">
-            <h3 class="title">Outlets</h3>
-        </div> 
-    </div>     
-
+<!-- END NAVBAR=================== --> 
+<!-- LINK BUTTON=================== -->
+<div class="container"> 
+ 	<ul class="nav nav-pills">
+    	<li class="active"><a data-toggle="pill" href="#presentations">Presentations</a></li>
+    	<li><a data-toggle="pill" href="#technical">Technical charateristic</a></li>
+ 	</ul> 
+	<div class="tab-content">
+    	<div id="presentations" class="tab-pane fade in active"> 
+            	<div class="name title"></div>
+                <div class="col-sm-4 conteiner-fluid">
+                	<div class=" row immage"></div>
+                	<div class=" row pricetag price"></div>                    
+                </div>
+                <div class="col-sm-8 conteiner-fluid">
+                	<div class="descriptions"></div>
+                </div>
+    	</div>
+    			<div id="technical" class="tab-pane"> 
+                	<div class="col-sm-8 conteiner-fluid">
+             			<div class="technical" style="margin-top:10%"></div>
+                	</div>
+   		 	</div>    
+	</div>    
 </div>    
-</div> 
-     
+    
+    
 </body>
 
 

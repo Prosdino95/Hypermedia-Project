@@ -10,7 +10,9 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <script src="./js/showdevice.js"></script>
+    <script src="./js/showdevicedetail.js"></script>
     <script src="./js/navbar.js"></script>
+    
     <!--script per il pulsante "show more"-->
     <script>
         $(document).ready(function(){
@@ -30,7 +32,7 @@
     </style>
 </head>
 <body>
-<!-- NAVBAR=================== -->
+    <!-- NAVBAR=================== -->    
 <div class="row" style="margin-top: 7%;">
         <nav class="nav navbar-fixed-top" role="navigation">
             <div id="header">
@@ -43,7 +45,7 @@
                         <a class="dropdown-toggle" href="devices.html"><strong>Device</strong>
                         <span class="caret"></span></a>
                         <ul class="dropdown-menu">
-                            <li><a href="#"><strong>Device Category</strong></a></li>
+                            <li><a href="./devicecategory.html"><strong>Device Category</strong></a></li>
                         </ul>
                     </li>
                     <li class="dropdown">
@@ -178,37 +180,10 @@
   </div> 
     <!--Qui finisce il codice del filtro--> 
     <div class='col-md-9 container-fluid'>
-        <div class='results'>
-
-        </div>
+    <div class='results'></div>
 	</div>
+</body>
 
-    <!-- FOOTER -->
-        <footer class="footer">
-            <div class="container">
-                <ul class="list-unstyled">
-                    <div class="btn pull-right">
-                        <a href="https://twitter.com/tim_official">
-                            <button class="btn btn-primary"><i class="fa fa-twitter-square fa-2x"></i><span class="network-name" style="font-size: 17px"> Twitter</span></button>
-                        </a>
-                    </div>
-                    <div class="btn pull-right">
-                        <a href="https://www.facebook.com/TimOfficialPage/">
-                            <button class="btn btn-primary"><i class="fa fa-facebook-official fa-2x"></i><span class="network-name" style="font-size: 17px"> Facebook</span></button>
-                        </a>
-                    </div>
-                    <div class="btn pull-right">
-                        <a href="https://www.youtube.com/user/TimChannel">
-                            <button class="btn btn-primary"><i class="fa fa-youtube-square fa-2x"></i><span class="network-name" style="font-size: 17px"> Youtube</span></button>
-                        </a>
-                    </div>
-                    <li class="pull-left">&copy; 2016 Company, Inc. Bartolini Brunato Prosdocimi</li>
-                    <li>Contatti</li>
-                    <li>Privacy</li>
-                    <li>Note legali</li>
-                    <li>Lavora con noi</li>
-                </ul>
-            </div>
-        </footer>
-    </body>
+
+
 </html>

@@ -6,16 +6,15 @@ $("document").ready(function(){
             crossDomain: true,
             
             
-            url: "./php/alldevicequery.php", //Relative or absolute path to file.php file
+            url: "./php/allsmservicesquery.php", //Relative or absolute path to file.php file
             success: function(response) {
-                  var device = JSON.parse(response)
-            	for(var i=0;i<device.length;i++){ //ogni 3 istanze dovresti cambiare riga     
+                  var sm = JSON.parse(response)
+            	for(var i=0;i<sm.length;i++){ //ogni 3 istanze dovresti cambiare riga     
                 $(".results").append("<div class='col-md-4 container-fluid' id='" + i +"'></div>");
                 $("#"+ i).append("<div class='col-md-4 container-fluid' id='" + i +"'></div>");
-                $("#"+ i).append("<div class='container'>"+  device[i].device_name +"</div>");
-                $("#"+ i).append("<img src='" + device[i].img + "' class='img-responsive' style='max-width: 210px; max-height: 228px;'>");
-                $("#"+ i).append("<p> &euro; "+  device[i].price +"</p>");
-				$("#"+ i).append('<a type="submit" class="query pull-right btn btn-info" onclick="showdevicedetail(\''+device[i].id+'\');">Discover it!</a>');
+                $("#"+ i).append("<div class='container'>"+  sm[i].nameID +"</div>");
+                $("#"+ i).append("<img src='" + sm[i].img + "' class='img-responsive pull-left gap-right' style='max-width: 210px; max-height: 228px;'>");
+				$("#"+ i).append('<a type="submit" class="query pull-right btn btn-info" onclick="showsmartlife(\''+sm[i].nameID+'\');">Discover More!</a>');
               
             }    
             },

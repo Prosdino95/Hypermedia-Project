@@ -6,7 +6,7 @@ $("document").ready(function(){
             crossDomain: true,
             
             
-            url: "./php/alldevicequery.php", //Relative or absolute path to file.php file
+            url: "./php/allpromotionsquery.php", //Relative or absolute path to file.php file
             success: function(response) {
                   var device = JSON.parse(response)
             	for(var i=0;i<device.length;i++){ //ogni 3 istanze dovresti cambiare riga     
