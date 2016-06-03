@@ -21,16 +21,14 @@ $("document").ready(function(){
             method: "GET",
             //dataType: "json", //type of data
             crossDomain: true,
-            url: "./php/show.php", //Riprendi da qui, devi definire il file php
+            url: "./php/showsmlife.php", //Riprendi da qui, devi definire il file php
             data: {id:value},
             success: function(response) {
-                  var device = JSON.parse(response)
-            for(var i=0;i<device.length;i++){ 
-                $(".name").append("<h2>"+  device[i].device_name +"</h2>");
-                $(".immage").append("<img src='" + device[i].img + "' class='img-responsive pull-left gap-right' style='max-width: 210px; max-height: 228px;'>");
-                $(".descriptions").append("<p>"+  device[i].description +"</p>");
-                $(".price").append("<p> &euro; "+  device[i].price +"</p>");
-                $(".technical").append("<p>"+  device[i].technical +"</p>");                
+                  var smlife = JSON.parse(response)
+            for(var i=0;i<smlife.length;i++){ 
+                $(".name").append("<h2>"+  smlife[i].nameID +"</h2>");
+                $(".immage").append("<img src='" + smlife[i].img + "' class='img-responsive pull-left gap-right' style='max-width: 210px; max-height: 228px;'>");
+                $(".descriptions").append("<p>"+  smlife[i].description +"</p>");               
             }
 
                 

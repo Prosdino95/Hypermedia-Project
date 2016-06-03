@@ -1,7 +1,8 @@
 $("document").ready(function(){
         $.ajax({
             method: "POST",
-            //dataType: "json", //type of data
+            //questo script viene chiamato per mostrare tutti gli assistance services
+            
             crossDomain: true,
             url: "./php/performquery.php", //Relative or absolute path to file.php file
             

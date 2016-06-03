@@ -12,7 +12,7 @@ function getUrlVars()
     return vars;
 }
 
-// script che viene chiamato per mostrare un determinato device: l'id su cui viene fatta la query
+// script che viene chiamato per mostrare tutti gli assistance services relativi ad una certa categoria: l'id su cui viene fatta la query
 // viene passato tramite l URL
 $("document").ready(function(){
         console.log("la funzione loadass stata chiamata correttamente");
@@ -22,16 +22,16 @@ $("document").ready(function(){
             method: "GET",
             //dataType: "json", //type of data
             crossDomain: true,
-            url: "./php/showdevice.php", //Relative or absolute path to file.php file
+            url: "./php/assistancesByCategory.php", //Relative or absolute path to file.php file
             data: {id:value},
             success: function(response) {
-                  var device = JSON.parse(response)
-            for(var i=0;i<device.length;i++){ 
-                $(".name").append("<h2>"+  device[i].device_name +"</h2>");
-                $(".immage").append("<img src='" + device[i].img + "' class='img-responsive pull-left gap-right' style='max-width: 210px; max-height: 228px;'>");
-                $(".descriptions").append("<p>"+  device[i].description +"</p>");
-                $(".price").append("<p> &euro; "+  device[i].price +"</p>");
-                $(".technical").append("<p>"+  device[i].technical +"</p>");                
+                  var assistance = JSON.parse(response)
+            for(var i=0;i<assistance.length;i++){ 
+               $(".results").append("<div class='well col-md-6 container-fluid' id='" + i + "'></div>");
+                $("#"+ i).append("<h2>"+  assistance[i].nameID +"</h2>");
+                $("#"+ i).append("<img src='" + assistance[i].img + "' class='img-responsive pull-left gap-right' style='max-width: 150px; max-height: 178px;'>");
+                $("#"+ i).append("<p>"+  assistance[i].description +"</p>");
+                $("#"+ i).append('<a type="submit" class="query pull-right btn btn-info" onclick="showdetail(\''+assistance[i].nameID+'\');">Discover More!</a>');               
             }
 
                 
@@ -43,6 +43,3 @@ $("document").ready(function(){
         });
         return false;
     });
-    
-    
-  

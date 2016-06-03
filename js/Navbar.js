@@ -1,3 +1,4 @@
+//script per la navbar
 $(document).ready(function () {
         $('.dropdown').hover(
         function() {
