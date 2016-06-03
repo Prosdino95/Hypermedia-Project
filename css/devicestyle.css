@@ -16,3 +16,9 @@
      .not-shown{
         display: none;
    }
+
+    .device-box{
+        border: solid 1px;
+        height: 446px;
+        max-width: 235px;
+    }
