@@ -1,4 +1,3 @@
-
     .box-filtro{
          margin-bottom: 30px;
         max-width: 235px;
@@ -15,6 +14,8 @@
      }
      .not-shown{
         display: none;
+   }
+
    }
 
     .device-box{

@@ -14,9 +14,7 @@ function getUrlVars()
 
 
 $("document").ready(function(){
-        console.log("la funzione loadass stata chiamata correttamente");
-         var value = getUrlVars()["id"];
-        console.log(value);
+        var value = getUrlVars()["id"];
         $.ajax({
             method: "GET",
             //dataType: "json", //type of data
@@ -24,13 +22,13 @@ $("document").ready(function(){
             url: "./php/showdevice.php", //Relative or absolute path to file.php file
             data: {id:value},
             success: function(response) {
-                  var device = JSON.parse(response)
-            for(var i=0;i<device.length;i++){ 
-                $(".name").append("<h2>"+  device[i].device_name +"</h2>");
-                $(".immage").append("<img src='" + device[i].img + "' class='img-responsive pull-left gap-right' style='max-width: 210px; max-height: 228px;'>");
-                $(".descriptions").append("<p>"+  device[i].description +"</p>");
-                $(".price").append("<p> &euro; "+  device[i].price +"</p>");
-                $(".technical").append("<p>"+  device[i].technical +"</p>");                
+                var device = JSON.parse(response)
+                for(var i=0;i<device.length;i++){
+                    $(".name").append("<h2>"+  device[i].device_name +"</h2>");
+                    $(".immage").append("<img src='" + device[i].img + "' class='img-responsive pull-left gap-right' style='max-width: 210px; max-height: 228px;'>");
+                    $(".descriptions").append("<p>"+  device[i].description +"</p>");
+                    $(".price").append("<p> &euro; "+  device[i].price +"</p>");
+                    $(".technical").append("<p>"+  device[i].technical +"</p>");
             }
 
                 
@@ -44,4 +42,3 @@ $("document").ready(function(){
     });
     
     
-  

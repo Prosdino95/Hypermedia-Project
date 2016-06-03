@@ -1,27 +1,28 @@
-<!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title> Tim_Home_Page </title>
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <title>Bootstrap Case</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="./css/style.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
-  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-    <script src="./js/assistanceservicequery.js"></script>
-    <script src="./js/showassistance.js"></script>
-    <script src="./js/showdetail.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>ù
     <script src="./js/navbar.js"></script>
+    <script src="./js/queryAssistancesByCategory.js"></script>
+
 </head>
-<body>
-<!-- NAVBAR=================== -->    
+    <body>
+        <!-- Questa pagina mostra gli assistance services per una certa categoria -->
+<!-- NAVBAR=================== -->
 <div class="row" style="margin-top: 7%;">
         <nav class="nav navbar-fixed-top" role="navigation">
             <div id="header">
                 <ul class="nav nav-pills" >
                     <li><a href="index.html" class="btn btn-defaul" id="logo";>
-                        <img src="img/tim-logo.png" class="img-responsive"/></a></li>            
+                        <img src="img/tim-logo.png" class="img-responsive"/></a></li>
                     <li><a href="./thegroup.html" class="brand" > <strong>The Group</strong></a></li>
-                    <li><a href="#home"><strong>Promotions</strong></a></li>
+                    <li><a href="./promotions.html"><strong>Promotions</strong></a></li>
                     <li class="dropdown" >
                         <a class="dropdown-toggle" href="devices.html"><strong>Device</strong>
                         <span class="caret"></span></a>
@@ -30,7 +31,7 @@
                         </ul>
                     </li>
                     <li class="dropdown">
-                        <a class="dropdown-toggle" href="#"><strong>Smart Life Service</strong>
+                        <a class="dropdown-toggle" href="./smservices.html"><strong>Smart Life Service</strong>
                         <span class="caret"></span></a>
                         <ul class="dropdown-menu">
                             <li><a href="#"><strong>Smart Life Service Category</strong></a></li>
@@ -44,15 +45,19 @@
                         </ul>
                     </li>
                 </ul>
-                
-      </div>      
+
+      </div>
     </nav>
 </div>
-<!-- END NAVBAR=================== --> 
-    <div class="results"></div>
+<!-- END NAVBAR=================== -->
+<h3>QUESTA PAGINA MOSTRA ASSISTANCE SERVICES PER UNA CERTA CATEGORIA</h3>
+    <div class='results'></div>
 
 
-    <!-- FOOTER -->
+
+
+
+     <!-- FOOTER -->
         <footer class="footer">
             <div class="container">
                 <ul class="list-unstyled">
@@ -79,9 +84,5 @@
                 </ul>
             </div>
         </footer>
-
-</body>
-
-
-
+    </body>
 </html>
