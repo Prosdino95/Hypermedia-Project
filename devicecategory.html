@@ -5,11 +5,13 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-    <link rel="stylesheet" href="./css/DeviceAsSl.css">
+      <link rel="stylesheet" href="./css/DeviceAsSLCategoystyle.css">
+    <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
   <script src="./js/navbar.js"></script>
+  <script src="./js/setdevicecategory.js"></script>
     
 </head>
  <body>
@@ -51,41 +53,44 @@
 <!-- END NAVBAR=================== -->
      
      
-     
-<div class="row" style="margin-top: 10%;">   
+      
 <div class="container">
-    <div class="row">  
-        <div class="pull-left ">
-            <img src="./img/smartphone.png" class="immagedx">
-            <h3 class="title">Smartphones</h3>
-        </div> 
+    <div class="row">         
+    <div class="pull-left ">   
+        <img src="./img/smartphone.png" class="immagedx img-responsive">
+        <a type="submit" class="title" onclick="setdevicecategory('SmartphonesandPhones');">        
+        Smartphones</a>
+        </div>
     </div> 
     <div class="row">
         <div class="pull-right ">
+            <a type="submit" class="title" onclick="setdevicecategory('TabletsandComputers');">
+            Tablets & Computers</a>
             <img src="./img/tablet.png" class="immagesx img-responsive">
-            <h3 class="title">Tablets & Computers</h3>
         </div>
     </div>
     <div class="row">  
         <div class="pull-left ">
+            <a type="submit" class="title" onclick="setdevicecategory('TVandSmartLiving');">
             <img src="./img/tv.png" class="immagedx img-responsive">
-            <h3 class="title">TV & SmartLiving</h3>
+            TV & SmartLiving</a>
         </div> 
     </div> 
     <div class="row">
         <div class="pull-right ">
+            <a type="submit" class="title" onclick="setdevicecategory('ModemandNetworking');">
             <img src="./img/modem.png" class="immagesx img-responsive">
-            <h3 class="title">Modem & Networking</h3>
+            Modem & Networking</a>
         </div>
     </div>    
     <div class="row">  
         <div class="pull-left ">
-            <img src="./img/outlet.png" class="immagedx img-responsive">
-            <h3 class="title">Outlets</h3>
+            <a type="submit" class="title" onclick="setdevicecategory('Outlets');">
+            <img src="./img/outlet.png" class="immagedx img-responsive">            
+            Outlets</a>
         </div> 
     </div>     
-
-</div>    
+    
 </div> 
       <!-- FOOTER -->
         <footer class="footer">

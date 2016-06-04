@@ -6,6 +6,7 @@
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/theSLservicestyle.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>ù
     <script src="./js/navbar.js"></script>  
@@ -52,22 +53,35 @@
 </div>
 <!-- END NAVBAR=================== -->
  
-        <h2>CIAO, sono un singolo sm service</h2>
-        <div class="results container-fluid">
-    	<div id="presentations" class="row"> 
+<div class="container"> 
+ 	<ul class="nav nav-pills">
+    	<li class="active"><a data-toggle="pill" href="#presentations">Presentations</a></li>
+    	<li><a data-toggle="pill" href="#Rules">Activations & Rules</a></li>
+        <li><a data-toggle="pill" href="#FAQ">F.A.Q.</a></li>
+ 	</ul> 
+	<div class="tab-content">
+    	<div id="presentations" class="tab-pane fade in active"> 
             	<div class="name title"></div>
                 <div class="col-sm-4 conteiner-fluid">
-                	<div class=" row immage"></div>                    
+                	<div class=" row immage"></div>
+                	<div class=" row pricetag price"></div>                    
                 </div>
                 <div class="col-sm-8 conteiner-fluid">
                 	<div class="descriptions"></div>
                 </div>
-        
-        
-        
-        
-        
-        </div>
+    	</div>
+    	<div id="Rules" class="tab-pane"> 
+                	<div class="col-sm-8 conteiner-fluid" style="margin-top:2%">
+                    <div class=" row Rules"></div>
+                	</div>
+   		 </div> 
+         <div id="FAQ" class="tab-pane"> 
+                	<div class="col-sm-8 conteiner-fluid" style="margin-top:2%">
+                    <div class=" FAQ"></div>
+                	</div>
+   		 </div>
+	</div>    
+</div>    
         
         
     <!-- FOOTER -->
