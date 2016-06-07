@@ -28,7 +28,10 @@ $("document").ready(function(){
             for(var i=0;i<smlife.length;i++){ 
                 $(".name").append("<h2>"+  smlife[i].nameID +"</h2>");
                 $(".immage").append("<img src='" + smlife[i].img + "' class='img-responsive pull-left gap-right' style='max-width: 210px; max-height: 228px;'>");
-                $(".descriptions").append("<p>"+  smlife[i].description +"</p>");               
+                $(".descriptions").append("<p>"+  smlife[i].description +"</p>"); 
+                $(".price").append("<p>da &euro; "+  smlife[i].Price +"/mese</p>"); 
+                $(".FAQ").append("<p>"+  smlife[i].FAQ +"</p>");
+                $(".Rules").append("<p>"+  smlife[i].Rules +"</p>");
             }
 
                 

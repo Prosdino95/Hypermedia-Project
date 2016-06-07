@@ -28,6 +28,7 @@ $("document").ready(function(){
                   var device = JSON.parse(response)
             for(var i=0;i<device.length;i++){ 
                $(".results").append("<div class='well col-md-6 container-fluid' id='" + i + "'></div>");
+                $(".categoryname").text("" + value +"");
                 $("#"+ i).append("<h2>"+  device[i].device_name +"</h2>");
                 $("#"+ i).append("<img src='" + device[i].img + "' class='img-responsive pull-left gap-right' style='max-width: 150px; max-height: 178px;'>");
                 $("#"+ i).append("<p> &euro; "+  device[i].price +"</p>");

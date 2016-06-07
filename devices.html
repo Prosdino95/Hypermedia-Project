@@ -12,7 +12,8 @@
     <script src="./js/showdevice.js"></script>
     <script src="./js/showdevicedetail.js"></script>
     <script src="./js/navbar.js"></script>
-    
+    <script src="./js/device-filter.js"></script>
+     
     <!--script per il pulsante "show more"-->
     <script>
         $(document).ready(function(){
@@ -68,8 +69,21 @@
     </nav>
 </div>
 <!-- END NAVBAR=================== -->
-    <!--Da qui inizia il codice del filtro-->
-   <div class="col-sm-3"> 
+<!-- BREADCRUMB=================== -->
+<div class="row">
+<ol class="breadcrumb" style="margin-bottom: 3%; margin-left: 3%; margin-right: 3%;">
+  <li class="active">Devices</li>
+  <li class="pull-right" style="margin-right: 3%;" ><a href="./index.html">Go to Home</a>
+</ol>
+	
+</div>
+
+<!-- END BREADCRUMB=================== -->
+
+
+   <div class="container">
+        <!--Da qui inizia il codice del filtro-->
+        <div class="col-sm-3">
     <div class="box-filtro">
         <div class="cont-interno">
             <div class="panel-group" id="accordion">
@@ -82,23 +96,36 @@
                         <div class="panel-body">
                             <div class="checkbox">
                                 <label>
-                                    <input type="checkbox" class="ez-checkbox">Alcatel
+                                    <input type="checkbox" class ="ez-checkbox" value="Alcatel">Alcatel
                                 </label>
                             </div>
                             <div class="checkbox">
                                 <label>
-                                    <input type="checkbox" class="ez-checkbox">Apple
+                                    <input type="checkbox" class="ez-checkbox" value="Apple">Apple
                                 </label>
                             </div>
                             <div class="checkbox">
                                 <label>
-                                    <input type="checkbox" class="ez-checkbox">BlackBerry
+                                    <input type="checkbox" class="ez-checkbox" value="BlackBerry">BlackBerry
+                                </label>
+                            </div>
+                            <div class="checkbox not-shown">
+                                <label>
+                                    <input type="checkbox" class="ez-checkbox" value="Huawei">Huawei
+                                </label>
+                            </div>
+                            <div class="checkbox not-shown">
+                                <label>
+                                    <input type="checkbox" class="ez-checkbox" value="Nokia">Nokia
+                                </label>
+                            </div>
+                            <div class="checkbox not-shown">
+                                <label>
+                                    <input type="checkbox" class="ez-checkbox" value="Samsung">Samsung
                                 </label>
                             </div>
                             <div class="checbox">
-                                <label class="show-others">
-                                    show more&gt;&gt;
-                                </label>
+                                <label class="show-others">show more&gt;&gt;</label>
                             </div>
                         </div>
                     </div>
@@ -149,27 +176,25 @@
                     <div class="panel-heading active">
                         <h4 class="panel-title">Technical Characteristic: OS</h4>
                     </div>
-                    <div id="Cost" class="panel-collapse collpase in">
+                    <div id="OS" class="panel-collapse collpase in">
                         <div class="panel-body">
                             <div class="checkbox">
                                 <label>
-                                    <input type="checkbox" class="ez-checkbox">Android
+                                    <input type="checkbox" class="ez-checkbox" value="Android">Android
                                 </label>
                             </div>
                             <div class="checkbox">
                                 <label>
-                                    <input type="checkbox" class="ez-checkbox">iOS
+                                    <input type="checkbox" class="ez-checkbox" value="iOS">iOS
                                 </label>
                             </div>
                             <div class="checkbox">
                                 <label>
-                                    <input type="checkbox" class="ez-checkbox">Windows
+                                    <input type="checkbox" class="ez-checkbox" value="Windows">Windows
                                 </label>
                             </div>
                             <div class="checbox">
-                                <label class="show-others">
-                                    show more&gt;&gt;
-                                </label>
+                                <label class="show-others">show more&gt;&gt;</label>
                             </div>
                         </div>
                     </div>
@@ -178,11 +203,15 @@
         </div>
     </div>
   </div> 
-    <!--Qui finisce il codice del filtro--> 
-    <div class='col-md-9 container-fluid'>
-    <div class='results'></div>
-	</div>
-    
+        <!--Qui finisce il codice del filtro-->
+        <div class='col-md-9 container-fluid'>
+            <div class="row">
+                <div class='results'></div>
+            	</div>
+        	</div>
+    	</div>
+
+
      <!-- FOOTER -->
      <div>
         <footer class="footer">

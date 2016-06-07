@@ -22,26 +22,24 @@ $("document").ready(function(){
             method: "GET",
             //dataType: "json", //type of data
             crossDomain: true,
-            url: "./php/showdevice.php", //Relative or absolute path to file.php file
+            url: "./php/devicerelatedsm.php", //Relative or absolute path to file.php file
             data: {id:value},
             success: function(response) {
-                  var device = JSON.parse(response)
-            for(var i=0;i<device.length;i++){
-                $(".name").append("<h2>"+  device[i].device_name +"</h2>");
-                $(".immage").append("<img src='" + device[i].img + "' class='img-responsive pull-left gap-right' style='max-width: 210px; max-height: 228px;'>");
-                $(".descriptions").append("<p>"+  device[i].description +"</p>");
-                $(".price").append("<p> &euro; "+  device[i].price +"</p>");
-                $(".technical").append("<p>"+  device[i].technical +"</p>");
-            }
-
-
+                  var sm = JSON.parse(response)
+            for(var i=0;i<sm.length;i++){ 
+                $(".results").append("<div class='col-md-4 container-fluid' id='" + i +"'></div>");
+                $("#"+ i).append("<div class='col-md-4 container-fluid' id='" + i +"'></div>");
+                $("#"+ i).append("<div class='container'>"+  sm[i].nameID +"</div>");
+                $("#"+ i).append("<img src='" + sm[i].img + "' class='img-responsive pull-left gap-right' style='max-width: 210px; max-height: 228px;'>");
+				$("#"+ i).append('<a type="submit" class="query pull-right btn btn-info" onclick="showsmartlife(\''+sm[i].nameID+'\');">Discover More!</a>');
+            
+			}
+                
             },
-            error: function(request,error)
+            error: function(request,error) 
             {
                 console.log(request+":"+error);
             }
         });
         return false;
     });
-
-

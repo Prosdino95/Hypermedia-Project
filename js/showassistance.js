@@ -13,7 +13,7 @@ $("document").ready(function(){
             data: {number:value},
             success: function(response) {
                   var assistance = JSON.parse(response)
-            for(var i=0;i<assistance.length;i++){ //ogni 3 istanze dovresti cambiare riga
+            for(var i=0;i<assistance.length;i++){ //ogni 2 istanze dovresti cambiare riga
                 $(".results").append("<div class='container-fluid row' id='" + i + "'></div>");
                 $("#"+ i).append("<h2>"+  assistance[i].nameID +"</h2>");
                 $("#"+ i).append("<img src='" + assistance[i].img + "' class='img-responsive pull-left gap-right' style='max-width: 210px; max-height: 228px;'>");

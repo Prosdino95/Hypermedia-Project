@@ -14,16 +14,9 @@ else {
     //Takes the input value for the ID
     $id=$_GET["id"];
     # extract results mysqli_result::fetch_array
-    if($id=='Outlets'){
-    $query = "SELECT * FROM `devices` WHERE `inpromotion`='YES' ";
-    //query execution
-    $result = $mysqli->query($query);    
-    }
-    else{
-    $query = "SELECT * FROM `devices` WHERE `category`='" . $id . "'";
+    $query = "SELECT * FROM smartlifeservices JOIN hassmartlife on nameID=`idsmartlife` WHERE `iddevice`='" . $id . "'";
     //query execution
     $result = $mysqli->query($query);
-    }
     //if there are data available
     if($result->num_rows >0)
     {
@@ -43,3 +36,9 @@ else {
 
 
 }
+
+
+
+
+
+?>

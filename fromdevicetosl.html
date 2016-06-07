@@ -1,20 +1,20 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>The Group Tim</title>
+  <title>SMServices</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-      <link rel="stylesheet" href="./css/DeviceAsSLCategoystyle.css">
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="./css/style.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
-  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-  <script src="./js/navbar.js"></script>
-  <script src="./js/setdevicecategory.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>ù
+    <script src="./js/navbar.js"></script>  
+    <script src="./js/queryfromdevicetosl.js "></script> 
+    <script src="./js/showsmartlife.js"></script>
     
 </head>
- <body>
+    <body>
 <!-- NAVBAR=================== -->    
 <div class="row" style="margin-top: 7%;">
         <nav class="nav navbar-fixed-top" role="navigation">
@@ -28,7 +28,7 @@
                         <a class="dropdown-toggle" href="devices.html"><strong>Device</strong>
                         <span class="caret"></span></a>
                         <ul class="dropdown-menu">
-                            <li><a href="./devicecategory.html"><strong>Device Category</strong></a></li>
+                            <li><a href="#"><strong>Device Category</strong></a></li>
                         </ul>
                     </li>
                     <li class="dropdown">
@@ -51,58 +51,12 @@
     </nav>
 </div>
 <!-- END NAVBAR=================== -->
-     <!-- BREADCRUMB=================== -->
-<div class="row">
-<ol class="breadcrumb" style="margin-bottom: 3%; margin-left: 3%; margin-right: 3%;">
-  <li><a href="./devices.html">Devices</a></li>
-  <li class="active">Device Category</li>
-  <li class="pull-right" style="margin-right: 3%;" ><a href="./index.html">Go to Home</a>
-</ol>
-	
-</div>
-
-<!-- END BREADCRUMB=================== -->
-     
-      
-<div class="container">
-    <div class="row">         
-    <div class="pull-left ">   
-        <img src="./img/smartphone.png" class="immagedx img-responsive">
-        <a type="submit" class="title" onclick="setdevicecategory('SmartphonesandPhones');">        
-        Smartphones</a>
+ 
+        <div class="row">
+        <div class="results"></div>
         </div>
-    </div> 
-    <div class="row">
-        <div class="pull-right ">
-            <a type="submit" class="title" onclick="setdevicecategory('TabletsandComputers');">
-            Tablets & Computers</a>
-            <img src="./img/tablet.png" class="immagesx img-responsive">
-        </div>
-    </div>
-    <div class="row">  
-        <div class="pull-left ">
-            <a type="submit" class="title" onclick="setdevicecategory('TVandSmartLiving');">
-            <img src="./img/tv.png" class="immagedx img-responsive">
-            TV & SmartLiving</a>
-        </div> 
-    </div> 
-    <div class="row">
-        <div class="pull-right ">
-            <a type="submit" class="title" onclick="setdevicecategory('ModemandNetworking');">
-            <img src="./img/modem.png" class="immagesx img-responsive">
-            Modem & Networking</a>
-        </div>
-    </div>    
-    <div class="row">  
-        <div class="pull-left ">
-            <a type="submit" class="title" onclick="setdevicecategory('Outlets');">
-            <img src="./img/outlet.png" class="immagedx img-responsive">            
-            Outlets</a>
-        </div> 
-    </div>     
-    
-</div> 
-      <!-- FOOTER -->
+        
+    <!-- FOOTER -->
         <footer class="footer">
             <div class="container">
                 <ul class="list-unstyled">
@@ -129,8 +83,6 @@
                 </ul>
             </div>
         </footer>
-</body>
-
-
-
+    </body>
 </html>
+

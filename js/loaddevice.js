@@ -27,13 +27,16 @@ $("document").ready(function(){
             success: function(response) {
                   var device = JSON.parse(response)
             for(var i=0;i<device.length;i++){ 
+            	$(".devicecategory").text(""+  device[i].category +"");
+            	$(".devicename").text(""+  device[i].device_name +"");
                 $(".name").append("<h2>"+  device[i].device_name +"</h2>");
                 $(".immage").append("<img src='" + device[i].img + "' class='img-responsive pull-left gap-right' style='max-width: 210px; max-height: 228px;'>");
                 $(".descriptions").append("<p>"+  device[i].description +"</p>");
                 $(".price").append("<p> &euro; "+  device[i].price +"</p>");
-                $(".technical").append("<p>"+  device[i].technical +"</p>");                
-            }
-
+                $(".technical").append("<p>"+  device[i].technical +"</p>");  
+                $(".tosm").append("<a type='submit' class='pull-right query btn btn-info' onclick='showrelatedas(\""+device[i].id+"\");'>See associated SmartLife!</a>");
+            
+			}
                 
             },
             error: function(request,error) 
