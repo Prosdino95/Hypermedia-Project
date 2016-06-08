@@ -7,45 +7,52 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="./css/style.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
-  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>ù
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <script src="./js/navbar.js"></script>  
     
-</head><!-- NAVBAR
-    =================== -->
+</head>
     <body>
 <!-- NAVBAR=================== -->    
 <div class="row" style="margin-top: 7%;">
-        <nav class="nav navbar-fixed-top" role="navigation">
-            <div id="header">
-                <ul class="nav nav-pills" >
-                    <li><a href="index.html" class="btn btn-defaul" id="logo";>
-                        <img src="img/tim-logo.png" class="img-responsive"/></a></li>            
-                    <li><a href="./thegroup.html" class="brand" > <strong>The Group</strong></a></li>
-                    <li><a href="./promotions.html"><strong>Promotions</strong></a></li>
-                    <li class="dropdown" >
-                        <a class="dropdown-toggle" href="devices.html"><strong>Device</strong>
-                        <span class="caret"></span></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="./devicecategory.html"><strong>Device Category</strong></a></li>
-                        </ul>
-                    </li>
-                    <li class="dropdown">
-                        <a class="dropdown-toggle" href="./smservices.html"><strong>Smart Life Service</strong>
-                        <span class="caret"></span></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#"><strong>Smart Life Service Category</strong></a></li>
-                        </ul>
-                    </li>
-                    <li class="dropdown">
-                        <a class="dropdown-toggle" href="./assistanceservices.html"><strong>Assistance Service</strong>
-                        <span class="caret"></span></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="./assistancecategories.html"><strong>Assistance Service Category</strong></a></li>
-                        </ul>
-                    </li>
-                </ul>
-                
-      </div>      
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="./index.html" id="logo"><img src="img/tim-logo.png" class="img-responsive"/></a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li><a href="./thegroup.html" class="brand" ><strong>The Group</strong></a></li>
+                <li><a href="./promotions.html"><strong>Promotions</strong></a></li>
+                <li class="dropdown" >
+                    <a role="button" aria-haspopup="true" aria-expanded="false" href="./devices.html"><strong>Device</strong>
+                    <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="./devicecategory.html"><strong>Device Category</strong></a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a role="button" aria-haspopup="true" aria-expanded="false" href="./smservices.html"><strong>Smart Life Service</strong>
+                    <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="smservicescategories.html"><strong>Smart Life Service Category</strong></a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a class="dropdown-toggle" href="./assistanceservices.html"><strong>Assistance Service</strong>
+                    <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="./assistancecategories.html"><strong>Assistance Service Category</strong></a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div><!--/.nav-collapse -->
+      </div>
     </nav>
 </div>
 <!-- END NAVBAR=================== -->
@@ -60,7 +67,7 @@
             <div class="carousel-caption">
               <h1>Welcome to TIM World</h1>
               <p class="lead">One of the best phone companies in the world so far</p>
-              <a class="btn btn-large btn-primary" href="#">Discover Our Great Deals Today!!</a>
+              <a class="btn btn-large btn-primary" href="./promotions.html">Discover Our Great Deals Today!!</a>
             </div>
           </div>
         </div>
@@ -70,7 +77,7 @@
             <div class="carousel-caption">
               <h1>Salute e Benessere</h1>
               <p class="lead">Prova gli ultimi wearables. Scopri come salute e benessere possono cambiare in meglio la tua vita. Libera la tua voglia di movimento. Condividi con gli amici i tuoi risultati. Il futuro è smart.</p>
-              <a class="btn btn-large btn-primary" href="#">Learn more</a>
+              <a class="btn btn-large btn-primary" onclick="window.open('./smservicebycategory.html?id=HEALTH');">Learn more</a>
             </div>
           </div>
         </div>
@@ -94,21 +101,21 @@
       <div class="row">
         <div class="span4 col-md-4">
             <img class="img-circle img-responsive center-block" src="img/iphone.jpg">
-          <h2>Discover the new iPhone Deal!</h2>
+          <h2>Discover the the latest SmartPhone Deal!</h2>
           <p>We are selling the new, innovative and life-changing device for a relly cheap price!</p>
-          <p><a class="btn" href="#">Discover More »</a></p>
+          <p><a class="btn" href="./thedevice.html?id=1">Discover More »</a></p>
         </div><!-- /.span4 -->
         <div class="span4 col-md-4">
             <img class="img-circle img-responsive center-block" src="img/smile.jpg">
           <h2>Improve your life!</h2>
           <p>Are you looking for some product to improve your everyday life? Give a look to our Smart Life Services to explore our wonderful world</p>
-          <p><a class="btn" href="#">Try a new Smart Life »</a></p>
+          <p><a class="btn" href="smservices.html">Try a new Smart Life »</a></p>
         </div><!-- /.span4 -->
         <div class="span4 col-md-4">
             <img class="img-circle img-responsive center-block" src="img/assistance.png">
           <h2>Do you need help?</h2>
           <p>Do you have some problem or are you trying to configure your brand new device? Let us help you!</p>
-          <p><a class="btn" href="#">Go to Assistance Service »</a></p>
+          <p><a class="btn" href="./assistanceservices.html">Go to Assistance Service »</a></p>
         </div><!-- /.span4 -->
       </div><!-- /.row -->
 

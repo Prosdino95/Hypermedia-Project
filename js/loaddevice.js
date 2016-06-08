@@ -27,8 +27,9 @@ $("document").ready(function(){
             success: function(response) {
                   var device = JSON.parse(response)
             for(var i=0;i<device.length;i++){ 
-            	$(".devicecategory").text(""+  device[i].category +"");
-            	$(".devicename").text(""+  device[i].device_name +"");
+            	$(".devicecategory").append("<a type='submit' class='query' onclick='window.open(\"./devicebycategory.html?id="+device[i].category+"\");'>"+  device[i].category +"</a>");
+            	$(".gotodevicecategory").append("<a type='submit' class='query' onclick='window.open(\"./devicebycategory.html?id="+device[i].category+"\");'>Go To "+  device[i].category +"</a>");
+                $(".devicename").text(""+  device[i].device_name +"");
                 $(".name").append("<h2>"+  device[i].device_name +"</h2>");
                 $(".immage").append("<img src='" + device[i].img + "' class='img-responsive pull-left gap-right' style='max-width: 210px; max-height: 228px;'>");
                 $(".descriptions").append("<p>"+  device[i].description +"</p>");

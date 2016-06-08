@@ -32,6 +32,7 @@ $("document").ready(function(){
                 $(".price").append("<p>da &euro; "+  smlife[i].Price +"/mese</p>"); 
                 $(".FAQ").append("<p>"+  smlife[i].FAQ +"</p>");
                 $(".Rules").append("<p>"+  smlife[i].Rules +"</p>");
+                $(".todevice").append("<a type='submit' class='pull-right query btn btn-info' onclick='showrelatedas(\""+smlife[i].nameID+"\");'>See associated Device!</a>");
             }
 
                 

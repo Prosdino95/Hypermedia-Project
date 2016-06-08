@@ -24,14 +24,19 @@ $("document").ready(function(){
             url: "./php/showassistance.php", //Relative or absolute path to file.php file
             data: {id:value},
             success: function(response) {
-                  var assistance = JSON.parse(response)
+                  var assistance = JSON.parse(response);
             for(var i=0;i<assistance.length;i++){ //ogni 3 istanze dovresti cambiare riga
-               $(".results").append("<div class='container-fluid row' id='" + i + "'></div>");
-                $("#"+ i).append("<h2>"+  assistance[i].nameID +"</h2>");
+            	$(".asname").text(""+  assistance[i].nameID +"");
+                $(".ascategory").append("<a type='submit' class='query' onclick='window.open(\"./assistanceservicebycategory.html?id="+assistance[i].category+"\");'>"+  assistance[i].category +"</a>");
+            	$(".gotoascategory").append("<a type='submit' class='query' onclick='window.open(\"./assistanceservicebycategory.html?id="+assistance[i].category+"\");'>Go To "+  assistance[i].category +"</a>");
+                $(".results").append("<div class='container-fluid row' id='" + i + "'></div>");
+                $("#"+ i).append("<h2 class='title'>"+  assistance[i].nameID +"</h2>");
                 $("#"+ i).append("<img src='" + assistance[i].img + "' class='img-responsive pull-left gap-right' style='max-width: 210px; max-height: 228px;'>");
-                $("#"+ i).append("<p>"+  assistance[i].description +"</p>");
-                $("#"+ i).append("<h3>CIAOSTRONZI</h3>");
+                $("#"+ i).append("<p style='margin-left:20%; margin-right:10%'>"+  assistance[i].description +"</p>");
+                $("#"+ i).append("<a type='submit' class='query btn btn-primary pull-right' onclick='window.open(\"./fromastodevice.html?id="+assistance[i].nameID+"\");'>See Related Devices</a>");
+                //Da Mettere la pagina di transizione
             }
+            
 
                 
             },

@@ -18,7 +18,6 @@ $("document").ready(function(){
                 $("#"+ i).append("<h2>"+  assistance[i].nameID +"</h2>");
                 $("#"+ i).append("<img src='" + assistance[i].img + "' class='img-responsive pull-left gap-right' style='max-width: 210px; max-height: 228px;'>");
                 $("#"+ i).append("<p>"+  assistance[i].description +"</p>");
-                $("#"+ i).append("<h3>CIAOSTRONZI</h3>");
                 
             }
 
