@@ -10,12 +10,14 @@ $("document").ready(function(){
             success: function(response) {
                   var sm = JSON.parse(response)
             	for(var i=0;i<sm.length;i++){ //ogni 3 istanze dovresti cambiare riga     
-              	$(".results").append("<div class='col-md-4' id='" + i +"'></div>");
-                $("#"+ i).append("<div style='position:relative;' class='thumbnail dev-"+ i +"'></div>");
-                $(".dev-"+i).append("<img src='" + sm[i].img + "' class='img-responsive' style='max-width: 210px; max-height: 228px; display: block;'>");
-                $(".dev-"+i).append("<div class='caption'></div>")
-                $(".dev-"+i+">div").append("<p style='text-align: center;'>"+  sm[i].nameID +"</p>");
-                $(".dev-"+i+">div").append("<a type='submit' class='query btn btn-block btn-info' onclick='showsmartlife(\""+sm[i].nameID+"\");'>Discover it!</a>");
+                
+                $(".results").append("<div class='well container-fluid' id='" + i + "'></div>");
+                $("#"+ i).append("<h2>"+  sm[i].nameID +"</h2>");
+                $("#"+ i).append("<img src='" + sm[i].img + "' class='img-responsive ' style='max-width: 150px; max-height: 178px;'>");
+                if(sm[i].Price!=0 && sm[i].Abbonamento==1 )$("#"+ i).append("<p style='margin-left:20%; margin-right:15%; font-size:20px; font-weight:bold;'>da &euro; "+  sm[i].Price +"/mese</p>");
+                if(sm[i].Price!=0 && sm[i].Abbonamento==0 )$("#"+ i).append("<p style='margin-left:20%; margin-right:15%; font-size:20px; font-weight:bold;'>&euro; "+  sm[i].Price +"</p>"); 
+                $("#"+ i).append('<a type="submit" class="query pull-right pull-down btn btn-info" onclick="showsmartlife(\''+sm[i].nameID+'\');">Discover More!</a>');
+                
             }    
             },
             error: function(request,error) 

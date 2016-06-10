@@ -26,10 +26,13 @@ $("document").ready(function(){
             success: function(response) {
                   var smlife = JSON.parse(response)
             for(var i=0;i<smlife.length;i++){ 
+            	$(".category").append("<a type='submit' class='query' onclick='window.open(\"./smservicebycategory.html?id="+smlife[i].category+"\");'>"+  smlife[i].category +"</a>");
+                $(".smname").text(""+  smlife[i].nameID +"");
                 $(".name").append("<h2>"+  smlife[i].nameID +"</h2>");
                 $(".immage").append("<img src='" + smlife[i].img + "' class='img-responsive pull-left gap-right' style='max-width: 210px; max-height: 228px;'>");
                 $(".descriptions").append("<p>"+  smlife[i].description +"</p>"); 
-                $(".price").append("<p>da &euro; "+  smlife[i].Price +"/mese</p>"); 
+                if(smlife[i].Price!=0 && smlife[i].Abbonamento==1 )$(".price").append("<p>da &euro; "+  smlife[i].Price +"/mese</p>"); 
+                if(smlife[i].Price!=0 && smlife[i].Abbonamento==0 )$(".price").append("<p>&euro; "+  smlife[i].Price +"</p>"); 
                 $(".FAQ").append("<p>"+  smlife[i].FAQ +"</p>");
                 $(".Rules").append("<p>"+  smlife[i].Rules +"</p>");
                 $(".todevice").append("<a type='submit' class='pull-right query btn btn-info' onclick='showrelatedas(\""+smlife[i].nameID+"\");'>See associated Device!</a>");

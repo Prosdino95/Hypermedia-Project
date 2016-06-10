@@ -9,10 +9,11 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>ù
     <script src="./js/navbar.js"></script> 
-    <script src="./js/querysmByCategory.js"></script> 
+    <script src="./js/querysmByCategory.js"></script>
+    <script src="./js/showsmartlife.js"></script> 
+     
     
-</head><!-- NAVBAR
-    =================== -->
+</head>
     <body>
 <!-- NAVBAR=================== -->    
 <div class="row" style="margin-top: 7%;">
@@ -32,17 +33,17 @@
                 <li><a href="./thegroup.html" class="brand" ><strong>The Group</strong></a></li>
                 <li><a href="./promotions.html"><strong>Promotions</strong></a></li>
                 <li class="dropdown" >
-                    <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" href="./devices.html"><strong>Device</strong>
+                    <a role="button" aria-haspopup="true" aria-expanded="false" href="./devices.html"><strong>Device</strong>
                     <span class="caret"></span></a>
                     <ul class="dropdown-menu">
                         <li><a href="./devicecategory.html"><strong>Device Category</strong></a></li>
                     </ul>
                 </li>
                 <li class="dropdown">
-                    <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" href="./smservices.html"><strong>Smart Life Service</strong>
+                    <a role="button" aria-haspopup="true" aria-expanded="false" href="./smservices.html"><strong>Smart Life Service</strong>
                     <span class="caret"></span></a>
                     <ul class="dropdown-menu">
-                        <li><a href="#"><strong>Smart Life Service Category</strong></a></li>
+                        <li><a href="./smservicescategories.html"><strong>Smart Life Service Category</strong></a></li>
                     </ul>
                 </li>
                 <li class="dropdown">
@@ -61,15 +62,17 @@
  <!-- BREADCRUMB=================== -->
 <div class="row">
 <ol class="breadcrumb" style="margin-bottom: 3%; margin-left: 3%; margin-right: 3%;">
-  <li class="active">SmartLife Services</li>
-  <li class="pull-right" style="margin-right: 3%;" ><a href="./index.html">Go to Home</a>
+  <li><a href="./smservices.html">SmartLife Services</a></li>
+  <li><a href="./smservicescategories.html">SmartLife Services Category</a></li>
+  <li class="active category"></li>
+  <li class="pull-right" style="margin-right: 3%;" ><a href="./index.html">SmartLife Services Category</a></li>
 </ol>
 	
 </div>
 
 <!-- END BREADCRUMB=================== -->
         
-       <div class="results"></div>
+       <div class="container results"></div>
         
         
         
