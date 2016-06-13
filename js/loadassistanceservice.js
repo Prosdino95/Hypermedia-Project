@@ -29,7 +29,7 @@ $("document").ready(function(){
             	$(".asname").text(""+  assistance[i].nameID +"");
                 $(".ascategory").append("<a type='submit' class='query' onclick='window.open(\"./assistanceservicebycategory.html?id="+assistance[i].category+"\");'>"+  assistance[i].category +"</a>");
             	$(".gotoascategory").append("<a type='submit' class='query' onclick='window.open(\"./assistanceservicebycategory.html?id="+assistance[i].category+"\");'>Go To "+  assistance[i].category +"</a>");
-                $(".results").append("<div class='container-fluid row' id='" + i + "'></div>");
+                $(".results").append("<div class='container-fluid row the-item' id='" + i + "'></div>");
                 $("#"+ i).append("<h2 class='title'>"+  assistance[i].nameID +"</h2>");
                 $("#"+ i).append("<img src='" + assistance[i].img + "' class='img-responsive pull-left gap-right' style='max-width: 210px; max-height: 228px;'>");
                 $("#"+ i).append("<p style='margin-left:20%; margin-right:10%'>"+  assistance[i].description +"</p>");

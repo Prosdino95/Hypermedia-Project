@@ -2,7 +2,7 @@
 /* Padding below the footer and lighter body text */
 
     body {
-      padding-bottom: 40px;
+      padding-bottom: 70px;
       color: #5a5a5a;
     }
 
@@ -71,7 +71,6 @@
     }
 
     .carousel-control {
-      height: 80px;
       margin-top: 0;
       font-size: 120px;
       text-shadow: 0 1px 1px rgba(0,0,0,.4);
@@ -108,7 +107,6 @@
     .carousel-caption .btn {
       margin-top: 10px;
     }
-
 
 
     /* MARKETING CONTENT
@@ -244,23 +242,31 @@
 
     /* FOOTER CSS
     -------------------------------------------------- */
+    footer {
+    	min-width: 900px;
+        background-color: #004990;
+    }
     
-    #container{
-        position: relative;
-        width: 100%;
-        display: table;
-        background-color: #f0f0f0;
-    }
-    .footer-legal-info{
-        height: 100%;
-    }
-
     footer li{
         float: left;
-        margin-right: 30px;
-        margin-left: 30px;
-        line-height: 60px;
+        margin-right: 5px;
+        margin-left: 5px;
+        line-height: 45px;
+        color: #ffffff;
+        font-size: 13px; !important
     }
+    
+    footer .pull-left{
+    	margin-right: 20px;
+    }
+   	
     footer .container{
-        width: auto;
-        background-color: #f0f0f0;
+        width: 900px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .the-item{
+    	margin-right: 0;
+        margin-left: 0;
+    }

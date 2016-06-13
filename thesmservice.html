@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="./css/style.css">
   <link rel="stylesheet" href="./css/theSLservicestyle.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
-  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>ù
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <script src="./js/navbar.js"></script>  
     <script src="./js/showsmartlife.js"></script> 
     <script src="./js/loadsmartlife.js"></script> 
@@ -60,7 +60,7 @@
 </div>
 <!-- END NAVBAR=================== -->
   <!-- BREADCRUMB=================== -->
-<div class="row">
+<div>
 <ol class="breadcrumb" style="margin-bottom: 3%; margin-left: 3%; margin-right: 3%;">
   <li><a href="./smservices.html">Smart Life Services</a></li>
   <li><a href="./smservicescategories.html">Smart Life Services Categories</a></li>
@@ -75,72 +75,65 @@
 <div class="container"> 
  	<ul class="nav nav-pills">
     	<li class="active"><a data-toggle="pill" href="#presentations">Presentations</a></li>
-    	<li><a data-toggle="pill" href="#Rules">Activations & Rules</a></li>
+    	<li><a data-toggle="pill" href="#Rules">Activations &amp; Rules</a></li>
         <li><a data-toggle="pill" href="#FAQ">F.A.Q.</a></li>
  	</ul> 
 	<div class="tab-content">
     	<div id="presentations" class="tab-pane fade in active"> 
-            	<div class="name title"></div>
-                <div class="col-sm-4 conteiner-fluid">
-                	<div class=" row immage"></div>
-                	<div class=" row pricetag price"></div>                    
+            <div class="name title"></div>
+            <div class="row">
+                <div class="col-sm-4 container-fluid">
+                    <div class=" row immage"></div>
+                    <div class=" row pricetag price"></div>                    
                 </div>
-                <div class="col-sm-8 conteiner-fluid">
-                	<div class="descriptions"></div>
+                <div class="col-sm-8 container-fluid">
+                    <div class="descriptions"></div>
                 </div>
+            </div>
     	</div>
     	<div id="Rules" class="tab-pane"> 
-                	<div class="col-sm-8 conteiner-fluid" style="margin-top:2%">
-                    <div class=" row Rules"></div>
-                	</div>
-   		 </div> 
-         <div id="FAQ" class="tab-pane"> 
-                	<div class="col-sm-8 conteiner-fluid" style="margin-top:2%">
-                    <div class=" FAQ"></div>
-                	</div>
-   		 </div>
+            <div class="row">
+                <div class="col-sm-8 container-fluid Rules" style="margin-top:2%"></div>
+                <div class="col-sm-4"></div>
+            </div>
+        </div>
+        <div id="FAQ" class="tab-pane">
+            <div class="row">
+                <div class="col-sm-8 container-fluid FAQ" style="margin-top:2%"></div>
+                <div class="col-sm-4"></div>
+            </div>
+   	    </div>
 	</div>    
-</div>    
-<div class="todevice"></div>
-<div class="toas"></div>        
+	<div class="todevice pull-left"></div>
+	<div class="toas pull-left"></div>
+</div>            
         
     <!-- FOOTER -->
-        <footer>
-            <div id="container" class="row">
-                <div class="col-md-3 logo-ownership">
-                    <div class="footer-logo">
-                      <img src="./img/tim-logo.png">
-                  </div>
-                    <div class="ownership">
-                    <p>© 2016 Company, Inc. Bartolini Brunato Prosdocimi</p>
-                  </div>
-                </div>
-                <div class="col-md-5 footer-legal-info">
-                    <div class="row">
-                        <div class="col-md-3">Privacy</div>
-                        <div class="col-md-3">Note legali</div>
-                        <div class="col-md-3">Contatti</div>
-                        <div class="col-md-3">Lavora con noi</div>
-                    </div>
-                </div>
-                <div class="col-md-4 btn-group">
-                    <div class="btn">
-                    <a href="https://twitter.com/tim_official">
-                      <button class="btn btn-primary"><i class="fa fa-twitter-square fa-2x"></i><span class="network-name" style="font-size: 17px"> Twitter</span></button>
-                    </a>
-                  </div>
-                    <div class="btn">
-                    <a href="https://www.facebook.com/TimOfficialPage/">
-                      <button class="btn btn-primary"><i class="fa fa-facebook-official fa-2x"></i><span class="network-name" style="font-size: 17px"> Facebook</span></button>
-                    </a>
-                  </div>
-                    <div class="btn">
-                    <a href="https://www.youtube.com/user/TimChannel">
-                      <button class="btn btn-primary"><i class="fa fa-youtube-square fa-2x"></i><span class="network-name" style="font-size: 17px"> Youtube</span></button>
-                    </a>
-                  </div>
-                </div>
-          </div>
+        <footer class="footer navbar navbar-fixed-bottom">
+            <div class="container">
+                <ul class="list-unstyled">
+                    <li class="pull-left">&copy; 2016 Company, Inc. Bartolini Brunato Prosdocimi</li>
+                    <li>Contatti</li>
+                    <li>Privacy</li>
+                    <li>Note legali</li>
+                    <li>Lavora con noi</li>
+                    <li class="btn">
+                        <a href="https://twitter.com/tim_official">
+                            <button class="btn btn-primary"><i class="fa fa-twitter-square fa-lg"></i><span class="network-name" style="font-size: 17px"></span></button>
+                        </a>
+                    </li>
+                    <li class="btn">
+                        <a href="https://www.facebook.com/TimOfficialPage/">
+                            <button class="btn btn-primary"><i class="fa fa-facebook-official fa-lg"></i><span class="network-name" style="font-size: 17px"></span></button>
+                        </a>
+                    </li>
+                    <li class="btn">
+                        <a href="https://www.youtube.com/user/TimChannel">
+                            <button class="btn btn-primary"><i class="fa fa-youtube-square fa-lg"></i><span class="network-name" style="font-size: 17px"></span></button>
+                        </a>
+                    </li>
+                </ul>
+            </div>
         </footer>
     </body>
 </html>

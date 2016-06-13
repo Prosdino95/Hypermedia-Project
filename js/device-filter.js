@@ -37,7 +37,7 @@ $(document).ready(function(){
                 }
                 else{
                 	$(".results").html("");
-                    $(".results").append("<div>No such device</div>");
+                    $(".results").append("<div class='alert alert-info fade in'>No such device</div>");
                 }
             },
             error: function(request,error)

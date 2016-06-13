@@ -14,7 +14,7 @@ else {
     //echo "Successful connection"; // connection ok
 
     # extract results mysqli_result::fetch_array
-    $query = "SELECT `nameID`,`img` FROM `smartlifeservices` WHERE `inpromotion`='YES' UNION SELECT `device_name`,`img` FROM `devices`WHERE `inpromotion`='YES' ";
+    $query = "SELECT * FROM `devices` WHERE `inpromotion`='YES' ";
     //query execution
     $result = $mysqli->query($query);
     //if there are data available
