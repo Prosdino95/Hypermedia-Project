@@ -30,7 +30,7 @@
             }
             else{ $query.="AND ";}
             
-            $query.="`Price` IN ($cost) ";
+            $query.="`price_range` IN ($cost) ";
         }
         
         if(strlen($os) > 0){

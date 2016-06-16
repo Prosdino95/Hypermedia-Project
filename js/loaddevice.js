@@ -35,7 +35,7 @@ $("document").ready(function(){
                 $(".descriptions").append("<p>"+  device[i].description +"</p>");
                 $(".price").append("<p> &euro; "+  device[i].price +"</p>");
                 $(".technical").append("<p>"+  device[i].technical +"</p>");  
-                $(".tosm").append("<a type='submit' class='pull-right query btn btn-info' onclick='showrelatedas(\""+device[i].id+"\");'>See associated SmartLife!</a>");
+                $(".tosm").append("<a type='submit' class='pull-left query btn btn-info' onclick='showrelatedas(\""+device[i].id+"\");'>See associated SmartLife!</a>");
             
 			}
                 

@@ -31,8 +31,7 @@ $(document).ready(function(){
                         $(".dev-"+i).append("<div class='caption'></div>")
                         $(".dev-"+i+">div").append("<p style='text-align: center;'>"+  device[i].device_name +"</p>");
                         $(".dev-"+i+">div").append("<p style='text-align: center;'> &euro; "+  device[i].price +"</p>");
-                        $(".dev-"+i+">div").append("<a type='submit' class='query btn btn-block btn-info' onclick='showdevicedetail(\'"+device[i].id+"\');'>Discover it!</a>");
-
+						$(".dev-"+i+">div").append("<a type='submit' class='query btn btn-block btn-info' onclick='showdevicedetail(\""+device[i].id+"\");'>Discover it!</a>");
                     }
                 }
                 else{

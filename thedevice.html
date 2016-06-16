@@ -7,15 +7,13 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/thedevicestyle.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
-  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+  	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <script src="./js/loaddevice.js"></script>
     <script src="./js/navbar.js"></script>
     <script src="./js/showdevicedetail.js"></script>
     <script src="./js/showdetail.js"></script>
-    <script src="./js/queryfromdevicetoas.js"></script>
-    
-    
+    <script src="./js/queryfromdevicetoas.js"></script>    
 </head>
 <body>
 <!-- NAVBAR=================== -->    
@@ -63,7 +61,6 @@
 </div>
 <!-- END NAVBAR=================== -->
 <!-- BREADCRUMB=================== -->
-<div class="row">
 <ol class="breadcrumb" style="margin-bottom: 3%; margin-left: 3%; margin-right: 3%;">
   <li><a href="./devices.html">Devices</a></li>
   <li><a href="./devicecategory.html">Device Category</a></li>
@@ -71,9 +68,6 @@
   <li class="active devicename"></li>
   <li class="pull-right gotodevicecategory" style="margin-right: 3%;" ></li>
 </ol>
-	
-</div>
-
 <!-- END BREADCRUMB=================== -->
 
 
@@ -86,31 +80,32 @@
     	<li><a data-toggle="pill" href="#technical">Technical charateristic</a></li>
  	</ul> 
 	<div class="tab-content">
-    	<div id="presentations" class="tab-pane fade in active"> 
-            	<div class="name title"></div>
-                <div class="col-sm-4 conteiner-fluid">
-                	<div class=" row immage"></div>
-                	<div class=" row pricetag price"></div>                    
-                </div>
-                <div class="col-sm-8 conteiner-fluid">
-                	<div class="descriptions"></div>
-                </div>
+		<div id="presentations" class="tab-pane fade in active"> 
+            <div class="name title"></div>
+            <div class="col-sm-4 conteiner-fluid">
+                <div class=" row immage"></div>
+                <div class=" row pricetag price"></div>                    
+            </div>
+            <div class="col-sm-8 conteiner-fluid">
+                <div class="descriptions"></div>
+            </div>
     	</div>
-    			<div id="technical" class="tab-pane"> 
-                	<div class="col-sm-8 conteiner-fluid">
-             			<div class="technical" style="margin-top:10%"></div>
-                	</div>
+    		<div id="technical" class="tab-pane"> 
+                <div class="col-sm-8 conteiner-fluid">
+             		<div class="technical" style="margin-top:10%"></div>
+                </div>
    		 	</div>    
-	</div>    
-</div> 
-<div class="container row" style="margin-top:5%; margin-bottom:5%;">
-	<div class="col-sm-6">
-		<div class="tosm"></div>
-	</div>
-	<div class="col-sm-6">
-		<div class="toas"></div>
-    </div>    
-</div>
+		</div>    
+	</div> 
+    <div class="container row" style="margin-top:3%; margin-bottom:2%;">
+        <div class="col-sm-6" style="text-align: center;">
+        <div class="tosm" style="display: inline-block;"></div>
+        </div>
+        <div class="col-sm-6" style="text-align: center;">
+        	<span class="description">RELATED ASSISTANCES: </span>
+            <div class="toas" style="display: inline-block;"></div>
+        </div>    
+    </div>
 
       <!-- FOOTER -->
         <footer class="footer navbar navbar-fixed-bottom">

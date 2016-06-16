@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title> Tim_Home_Page </title>
+    <title>Devices</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
@@ -20,7 +20,6 @@
             $(".show-others").click(function(){
                 $(this).parent().parent().children(".not-shown").toggle();
                 $(this).text(function(i, text){
-                    console.log(text);
                     return text==="show more>>"?"show less<<":"show more>>";
                 });
             });
@@ -144,32 +143,32 @@
                         <div class="panel-body">
                             <div class="checkbox">
                                 <label>
-                                    <input type="checkbox" class="ez-checkbox">&lt;150
+                                    <input type="checkbox" class="ez-checkbox" value="1">&lt;150
                                 </label>
                             </div>
                             <div class="checkbox">
                                 <label>
-                                    <input type="checkbox" class="ez-checkbox">151-300
+                                    <input type="checkbox" class="ez-checkbox" value="2">151-300
                                 </label>
                             </div>
                             <div class="checkbox">
                                 <label>
-                                    <input type="checkbox" class="ez-checkbox">301-400
+                                    <input type="checkbox" class="ez-checkbox" value="3">301-400
                                 </label>
                             </div>
                             <div class="checkbox not-shown">
                                 <label>
-                                    <input type="checkbox" class="ez-checkbox">401-500
+                                    <input type="checkbox" class="ez-checkbox" value="4">401-500
                                 </label>
                             </div>
                             <div class="checkbox not-shown">
                                 <label>
-                                    <input type="checkbox" class="ez-checkbox">501-600
+                                    <input type="checkbox" class="ez-checkbox" value="5">501-600
                                 </label>
                             </div>
                             <div class="checkbox not-shown">
                                 <label>
-                                    <input type="checkbox" class="ez-checkbox">&gt;600
+                                    <input type="checkbox" class="ez-checkbox" value="6">&gt;600
                                 </label>
                             </div>
                             <div class="checbox">
