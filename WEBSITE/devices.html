@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Devices</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link type="text/css" rel="stylesheet" href="./css/style.css">
+    <link type="text/css" rel="stylesheet" href="./css/devicestyle.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="./js/showdevice.js"></script>
+    <script src="./js/showdevicedetail.js"></script>
+    <script src="./js/navbar.js"></script>
+    <script src="./js/device-filter.js"></script>
+     
+    <!--script per il pulsante "show more"-->
+    <script>
+        $(document).ready(function(){
+            $(".show-others").click(function(){
+                $(this).parent().parent().children(".not-shown").toggle();
+                $(this).text(function(i, text){
+                    return text==="show more>>"?"show less<<":"show more>>";
+                });
+            });
+        });
+    </script>
+    <style>
+        .panel-group{
+            margin-top: 0px;
+        }
+    </style>
+</head>
+<body>
+    <!-- NAVBAR=================== -->    
+<div class="row" style="margin-top: 7%;">
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="./index.html" id="logo"><img src="img/tim-logo.png" class="img-responsive"/></a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li><a href="./thegroup.html" class="brand" ><strong>The Group</strong></a></li>
+                <li><a href="./promotions.html"><strong>Promotions</strong></a></li>
+                <li class="dropdown" >
+                    <a role="button" aria-haspopup="true" aria-expanded="false" href="./devices.html"><strong>Device</strong>
+                    <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="./devicecategory.html"><strong>Device Category</strong></a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a role="button" aria-haspopup="true" aria-expanded="false" href="./smservices.html"><strong>Smart Life Service</strong>
+                    <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="./smservicescategories.html"><strong>Smart Life Service Category</strong></a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a class="dropdown-toggle" href="./assistanceservices.html"><strong>Assistance Service</strong>
+                    <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="./assistancecategories.html"><strong>Assistance Service Category</strong></a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+</div>
+<!-- END NAVBAR=================== -->
+<!-- BREADCRUMB=================== -->
+<ol class="breadcrumb" style="margin-bottom: 3%; margin-left: 3%; margin-right: 3%;">
+  <li class="active">Devices</li>
+  <li class="pull-right" style="margin-right: 3%;" ><a href="./index.html">Go to Home</a>
+</ol>
+	
+
+<!-- END BREADCRUMB=================== -->
+
+
+   <div class="container">
+        <!--Da qui inizia il codice del filtro-->
+        <div class="col-sm-3">
+    <div class="box-filtro">
+        <div class="cont-interno">
+            <div class="panel-group" id="accordion">
+                <h4 class="title-filtra">Filtra per</h4>
+                <div id="first-panel" class="panel panel-default">
+                    <div class="panel-heading active">
+                        <h4 class="panel-title">Brand</h4>
+                    </div>
+                    <div id="Brand" class="panel-collapse collpase in">
+                        <div class="panel-body">
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" class ="ez-checkbox" value="Alcatel">Alcatel
+                                </label>
+                            </div>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" class="ez-checkbox" value="Apple">Apple
+                                </label>
+                            </div>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" class="ez-checkbox" value="BlackBerry">BlackBerry
+                                </label>
+                            </div>
+                            <div class="checkbox not-shown">
+                                <label>
+                                    <input type="checkbox" class="ez-checkbox" value="Huawei">Huawei
+                                </label>
+                            </div>
+                            <div class="checkbox not-shown">
+                                <label>
+                                    <input type="checkbox" class="ez-checkbox" value="Nokia">Nokia
+                                </label>
+                            </div>
+                            <div class="checkbox not-shown">
+                                <label>
+                                    <input type="checkbox" class="ez-checkbox" value="Samsung">Samsung
+                                </label>
+                            </div>
+                            <div class="checbox">
+                                <label class="show-others">show more&gt;&gt;</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="filter-panel" class="panel panel-default">
+                    <div class="panel-heading active">
+                        <h4 class="panel-title">Cost</h4>
+                    </div>
+                    <div id="Cost" class="panel-collapse collpase in">
+                        <div class="panel-body">
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" class="ez-checkbox" value="1">&lt;150
+                                </label>
+                            </div>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" class="ez-checkbox" value="2">151-300
+                                </label>
+                            </div>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" class="ez-checkbox" value="3">301-400
+                                </label>
+                            </div>
+                            <div class="checkbox not-shown">
+                                <label>
+                                    <input type="checkbox" class="ez-checkbox" value="4">401-500
+                                </label>
+                            </div>
+                            <div class="checkbox not-shown">
+                                <label>
+                                    <input type="checkbox" class="ez-checkbox" value="5">501-600
+                                </label>
+                            </div>
+                            <div class="checkbox not-shown">
+                                <label>
+                                    <input type="checkbox" class="ez-checkbox" value="6">&gt;600
+                                </label>
+                            </div>
+                            <div class="checbox">
+                                <label class="show-others">show more&gt;&gt;</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="filter-panel" class="panel panel-default">
+                    <div class="panel-heading active">
+                        <h4 class="panel-title">Technical Characteristic: OS</h4>
+                    </div>
+                    <div id="OS" class="panel-collapse collpase in">
+                        <div class="panel-body">
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" class="ez-checkbox" value="Android">Android
+                                </label>
+                            </div>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" class="ez-checkbox" value="iOS">iOS
+                                </label>
+                            </div>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" class="ez-checkbox" value="Windows">Windows
+                                </label>
+                            </div>
+                            <div class="checbox">
+                                <label class="show-others">show more&gt;&gt;</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div> 
+        <!--Qui finisce il codice del filtro-->
+        <div class='col-md-9 container-fluid'>
+            <div class="row">
+                <div class='results'></div>
+            	</div>
+        	</div>
+    	</div>
+
+
+     <!-- FOOTER -->
+        <footer class="footer navbar navbar-fixed-bottom">
+            <div class="container">
+                <ul class="list-unstyled">
+                    <li class="pull-left">&copy; 2016 Company, Inc. Bartolini Brunato Prosdocimi</li>
+                    <li>Contatti</li>
+                    <li>Privacy</li>
+                    <li>Note legali</li>
+                    <li>Lavora con noi</li>
+                    <li class="btn">
+                        <a href="https://twitter.com/tim_official">
+                            <button class="btn btn-primary"><i class="fa fa-twitter-square fa-lg"></i><span class="network-name" style="font-size: 17px"></span></button>
+                        </a>
+                    </li>
+                    <li class="btn">
+                        <a href="https://www.facebook.com/TimOfficialPage/">
+                            <button class="btn btn-primary"><i class="fa fa-facebook-official fa-lg"></i><span class="network-name" style="font-size: 17px"></span></button>
+                        </a>
+                    </li>
+                    <li class="btn">
+                        <a href="https://www.youtube.com/user/TimChannel">
+                            <button class="btn btn-primary"><i class="fa fa-youtube-square fa-lg"></i><span class="network-name" style="font-size: 17px"></span></button>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </footer>
+	</body>
+</html>
